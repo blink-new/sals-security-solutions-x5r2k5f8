@@ -61,15 +61,8 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right Column - CCTV Image */}
-          <div className="relative flex justify-center items-center">
-            <img 
-              src="/cctv-bw.jpg" 
-              alt="CCTV Camera" 
-              className="bw-img rounded-xl shadow-lg w-full max-w-xs h-64 object-cover border border-border"
-              style={{ minWidth: 220 }}
-            />
-          </div>
+          {/* Right Column - Removed Image */}
+          <div></div>
         </div>
       </div>
     </section>
