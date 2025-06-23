@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from './ui/button';
-import { CheckCircle } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
 
 export function Hero() {
   const scrollToSection = (sectionId: string) => {
@@ -11,60 +11,44 @@ export function Hero() {
   };
 
   return (
-    <section className="relative pt-20 pb-8 security-gradient overflow-hidden border-b border-border">
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
-          {/* Left Column - Content */}
-          <div className="text-black space-y-6">
-            <h1 className="text-3xl lg:text-4xl font-extrabold leading-tight mb-2">
-              Professional CCTV & Video Security
-            </h1>
-            <p className="text-lg text-gray-700 leading-relaxed max-w-xl mb-2">
-              Protect your property with high-quality CCTV cameras and expert monitoring. Serving commercial and residential clients—no project too big or small.
-            </p>
-            {/* Key Benefits */}
-            <div className="grid grid-cols-2 gap-2 py-2">
-              <div className="flex items-center space-x-2">
-                <CheckCircle className="w-4 h-4 text-black" />
-                <span className="text-gray-800 text-sm">24/7 Monitoring</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <CheckCircle className="w-4 h-4 text-black" />
-                <span className="text-gray-800 text-sm">HD Night Vision</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <CheckCircle className="w-4 h-4 text-black" />
-                <span className="text-gray-800 text-sm">Crime Deterrence</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <CheckCircle className="w-4 h-4 text-black" />
-                <span className="text-gray-800 text-sm">Pro Installation</span>
-              </div>
-            </div>
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 mt-2">
-              <Button 
-                size="lg" 
-                className="bg-black hover:bg-gray-800 text-white px-8 py-3 text-base font-semibold"
-                onClick={() => scrollToSection('contact')}
-              >
-                Get Free Quote
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-2 border-black text-black hover:bg-black hover:text-white px-8 py-3 text-base font-semibold"
-                onClick={() => scrollToSection('services')}
-              >
-                View Services
-              </Button>
-            </div>
-          </div>
-
-          {/* Right Column - Removed Image */}
-          <div></div>
+    <section className="relative bg-background text-foreground pt-32 pb-20">
+      <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background"></div>
+      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="flex items-center justify-center space-x-2 mb-4">
+          <ShieldCheck className="w-6 h-6 text-primary" />
+          <p className="text-primary font-semibold tracking-widest uppercase">Total Security Solutions</p>
+        </div>
+        <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-6">
+          Advanced Surveillance for the Modern Age
+        </h1>
+        <p className="max-w-2xl mx-auto text-lg text-muted-foreground mb-10">
+          We provide cutting-edge CCTV systems and expert monitoring services to protect your assets, property, and people. High-tech security, simplified.
+        </p>
+        <div className="flex justify-center gap-4">
+          <Button 
+            size="lg"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/20"
+            onClick={() => scrollToSection('contact')}
+          >
+            Request a Free Quote
+          </Button>
+          <Button 
+            size="lg"
+            variant="outline"
+            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+            onClick={() => scrollToSection('services')}
+          >
+            Explore Services
+          </Button>
         </div>
       </div>
+      <style jsx>{`
+        .bg-grid-pattern {
+          background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+          background-size: 40px 40px;
+        }
+      `}</style>
     </section>
   );
 }

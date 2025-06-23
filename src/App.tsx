@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeroBlack } from './components/HeroBlack';
+import { Hero } from './components/Hero';
 import { Services } from './components/Services';
 import { About } from './components/About';
 import { Testimonials } from './components/Testimonials';
@@ -10,9 +10,9 @@ import { Header } from './components/Header';
 
 function App() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-background">
       <Header />
-      <HeroBlack />
+      <Hero />
       <Services />
       <About />
       <Testimonials />

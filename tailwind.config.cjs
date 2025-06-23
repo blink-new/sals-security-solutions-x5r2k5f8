@@ -85,6 +85,10 @@ module.exports = {
   			sans: [
   				'Inter var',
   				'sans-serif'
+  			],
+  			mono: [
+  				'Roboto Mono',
+  				'monospace'
   			]
   		},
   		animation: {
@@ -137,4 +141,4 @@ module.exports = {
   	}
   },
   plugins: [require("tailwindcss-animate")],
-} 
+}
